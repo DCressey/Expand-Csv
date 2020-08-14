@@ -5,7 +5,7 @@ The csv file contains data to be plugged into the template when an expansion is 
 
 The second input is a template.  In this context, a template is plain text with embedded variables.  The variables will be replaced by values drawn from the csv file.  The text itself can be in a language like SQL or HTML.  With certain limitations, it can even be in PS1 itself.
 
-The idea is top produce a very simple tool that can be used in a wide range of situations,  where the data stream is easily reduced to csv format.  The template then provide the form that the data should take on.
+The idea is to produce a very simple tool that can be used in a wide range of situations,  where the data stream is easily reduced to csv format.  The template then provide the form that the data should take on.
 
 I built this little tool as a way of coming up to speed on Powershell.  I'm hoping that others will find it useful.
 
