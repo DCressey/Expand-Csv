@@ -1,5 +1,5 @@
 # Expand-Csv-Powershell-function
-Expand-Csv is a table driven template expander. It is a function with two inputs, a csv file, and a template.  
+Expand-Csv is a table driven template expander. It is a function with two inputs, a csv file, and a template. It is intended to be used like a cmdlet.
 
 The csv file contains data to be plugged into the template when an expansion is produced.  The csv file has one record for each expansion to be generated and one field for each variable in the template.
 
