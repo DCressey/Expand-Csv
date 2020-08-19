@@ -17,10 +17,8 @@
 function Expand-csv {
     [CmdletBinding()]
     Param (
-       [Parameter(Mandatory=$true)]
-       [string] $driver,
-       [Parameter(Mandatory=$true)]
-       [string] $template
+       [Parameter(Mandatory=$true)] [string] $driver,
+       [Parameter(Mandatory=$true)] [string] $template
     )
     Process {
        Import-Csv $driver | % {
