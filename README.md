@@ -1,4 +1,3 @@
-# Expand-Csv
 Expand-Csv is a simple csv template engine. It is written as a Powershell function. It is intended to be used like a cmdlet.
 
 The two inputs are the filespec for a csv file and the filespec for a template.
