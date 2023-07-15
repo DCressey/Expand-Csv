@@ -16,6 +16,8 @@ The process part consists of three steps:
 2.  for each field in the current record, generate a powershell variable that associates the name with the value.
 3.  for each line in the template, generate an expanded version with the variables resolved.
 
+There is a demo script that has two sample uses of Expand-csv.  There is a file results.txt that captures the results of running the demo.
+
 This tool is useful in a wide range of situations.  It's often easy to obtain the actual data in csv form. It's often easy to construct a template file that reflects the form the expansion should take on for later use.  
 
 
