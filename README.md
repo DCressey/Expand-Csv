@@ -20,4 +20,4 @@ There is a demo script that has two sample uses of Expand-csv.  There is a file 
 
 This tool is useful in a wide range of situations.  It's often easy to obtain the actual data in csv form. It's often easy to construct a template file that reflects the form the expansion should take on for later use.  
 
-
+#powershell #template #csv
