@@ -1,6 +1,7 @@
 Expand-Csv is a simple csv template engine. It is written as a Powershell function. It is intended to be used like a cmdlet.
-
-I built this little tool as a learning exercise.  I'm sharing it in the hopes that others wil find it  useful.
+I built this little tool as a learning exercise.  I'm sharing it in the hopes that others wil find it  useful.  Even though the
+implementation is very simple,  the tool can be used in a wide variety of circumstances.  If the form of the results can be expressed
+in a template, and the content can be expressed in a csv file,  then this tool can probably be used to good effect. 
 
 The two inputs identify a csv file and a template file.
 
@@ -16,8 +17,13 @@ The process part consists of three steps:
 2.  for each field in the current record, generate a powershell variable that associates the name with the value.
 3.  for each line in the template, generate an expanded version with the variables resolved.
 
-There is a demo script that has two sample uses of Expand-csv.  There is a file results.txt that captures the results of running the demo.
+There is a demo.txt file that illustrates the input and the results for two sample uses of Expand-Csv.  The first generates code
+to be run under powershell, and the second generates code to be run under SQL. 
 
-This tool is useful in a wide range of situations.  It's often easy to obtain the actual data in csv form. It's often easy to construct a template file that reflects the form the expansion should take on for later use.  
+You can run the demo yourself using script Gen-Demo.ps1 and files Invoke.CSV, Invoke.tmplt,  Grants.csv, and Grants.tmplt.
+
+There is a demo.txt file that captures the results of running the demo.
+
+Hope it helps.
 
 #powershell #template #csv
