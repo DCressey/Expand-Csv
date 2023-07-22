@@ -1,0 +1,6 @@
+privs,table,user
+ALL,Employees,DBA
+READ,Employees,Analyst
+"READ, WRITE", Employees, Application
+ALL,Departments,DBA
+READ,Departments,"Analyst, Application"
