@@ -28,17 +28,17 @@ Kyle   24
     Example 1:  Template
     --------------------
     
-& java -jar --create -user $name -id $id -file D:/HR/$name-$id-form.pdf
+java -jar --create -user $name -id $id -file D:/HR/$name-$id-form.pdf
     
     Example 1:  Results
     -------------------
-& java -jar --create -user John -id 18 -file D:/HR/John-18-form.pdf
-& java -jar --create -user Dave -id 19 -file D:/HR/Dave-19-form.pdf
-& java -jar --create -user Carmen -id 20 -file D:/HR/Carmen-20-form.pdf
-& java -jar --create -user Eric -id 21 -file D:/HR/Eric-21-form.pdf
-& java -jar --create -user Tom -id 22 -file D:/HR/Tom-22-form.pdf
-& java -jar --create -user Lisa -id 23 -file D:/HR/Lisa-23-form.pdf
-& java -jar --create -user Kyle -id 24 -file D:/HR/Kyle-24-form.pdf
+java -jar --create -user John -id 18 -file D:/HR/John-18-form.pdf
+java -jar --create -user Dave -id 19 -file D:/HR/Dave-19-form.pdf
+java -jar --create -user Carmen -id 20 -file D:/HR/Carmen-20-form.pdf
+java -jar --create -user Eric -id 21 -file D:/HR/Eric-21-form.pdf
+java -jar --create -user Tom -id 22 -file D:/HR/Tom-22-form.pdf
+java -jar --create -user Lisa -id 23 -file D:/HR/Lisa-23-form.pdf
+java -jar --create -user Kyle -id 24 -file D:/HR/Kyle-24-form.pdf
     
     Example 2:  CSV File
     --------------------
