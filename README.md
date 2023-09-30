@@ -10,7 +10,7 @@ The process part consists of three steps:
 2.  for each field in the current record, generate a powershell variable that associates the name with the value.
 3.  for each line in the template, generate an expanded version with the variables resolved.
 
-There is a demo.txt file that illustrates the input and the results for two sample uses of Expand-Csv.  The first generates code to be run under powershell, and the second generates code to be run under SQL.  You can run the demo yourself using script Gen-Demo.ps1 and files Invoke.CSV, Invoke.tmplt,  Grants.csv, and Grants.tmplt.
+There is a demo.txt file that illustrates the input and the results for two sample uses of Expand-Csv.  The first generates code to be run under powershell, and the second generates code to be run under SQL.  You can run the demo yourself using script Demo.ps1 and files Invoke.CSV, Invoke.tmplt,  Grants.csv, and Grants.tmplt.
 
 Hope it helps.
 
