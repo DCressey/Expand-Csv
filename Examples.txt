@@ -1,4 +1,4 @@
-﻿    Example 1:  CSV File
+    Example 1:  CSV File
     --------------------
     
 NAME,ID
@@ -10,7 +10,7 @@ Tom,22
 Lisa,23
 Kyle,24
    
-    Viewed as a table
+    CSV Data viewed as a table
     
 
 NAME   ID
@@ -40,6 +40,8 @@ java -jar --create -user Tom -id 22 -file D:/HR/Tom-22-form.pdf
 java -jar --create -user Lisa -id 23 -file D:/HR/Lisa-23-form.pdf
 java -jar --create -user Kyle -id 24 -file D:/HR/Kyle-24-form.pdf
     
+    
+    
     Example 2:  CSV File
     --------------------
     
@@ -50,7 +52,7 @@ READ,Employees,Analyst
 ALL,Departments,DBA
 READ,Departments,"Analyst, Application"
     
-    Viewed as a table
+    CSV DAta viewed as a table
     
 
 privs       table       user                
@@ -66,7 +68,6 @@ READ        Departments Analyst, Application
     Example 2:  Template
     --------------------
     
-
 grant $privs 
    on $table 
    to $user;
@@ -75,26 +76,21 @@ grant $privs
     Example 2:  Results
     -------------------
     
-
 grant ALL 
    on Employees 
    to DBA;
-
 
 grant READ 
    on Employees 
    to Analyst;
 
-
 grant READ, WRITE 
    on Employees 
    to Application;
 
-
 grant ALL 
    on Departments 
    to DBA;
-
 
 grant READ 
    on Departments 
