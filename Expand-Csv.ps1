@@ -1,7 +1,7 @@
  <#
 .NOTES
-    Script: Expand-Csv    Rev:  3.3
-    By:     DGC           Date: 2-27-25
+    Script: Expand-Csv    Rev:  3.4
+    By:     DGC           Date: 3-2-25
 .SYNOPSIS
     A toy template engine driven by data in a CSV file.
 .DESCRIPTION
@@ -18,12 +18,12 @@ function Expand-csv {
     Param (
         [Parameter(Mandatory=$true)] [string] $driver,
         [Parameter(Mandatory=$true)] [string] $template
-        )
+    )
     Process {
         Import-Csv $driver | % {
             $_.psobject.properties | % {Set-variable -name $_.name -value $_.value}
             Get-Content $template | % {$ExecutionContext.InvokeCommand.ExpandString($_)} 
-            }
         }
     }
+}
 
