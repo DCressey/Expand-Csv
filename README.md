@@ -8,7 +8,7 @@ The CSV file contains data to replace the variable items in the template.  It ca
 
 ## The Template file
 
-The template file is an ordinary text file with embedded variables.  The vasriables look like powershell variables.  These variables have the same name as the field names in the CSV file, except for the intial dollar sign.  Expand-csv attempts to resolve all powershell variables that it encounters in the template.  If there are varaibles in the template that are intended to be passed through to the expansions, they should be prefixed by a backtick.
+The template file is an ordinary text file with embedded variables.  The vasriables look like powershell variables.  These variables have the same name as the field names in the CSV file, except for the intial dollar sign.  Expand-csv attempts to resolve all powershell variables that it encounters in the template.  Someties, you want to insert a variable in the template, but it should be copied as is to the expansions.  In that case, you put a backtick in before the variable reference.
 
 There are two example files that show two sample suses of Expand-Csv.  The fist one 
 
@@ -18,7 +18,7 @@ This repository contains the source code to Expand-csv., a couple of example use
 
 ## The implementation
 
-The process block of Expand-Csv is all of 6 lines long.  It uses Import-Csv, Set-Variable, and ExpandString to do all the heavy lifting..THe code is just to set up three pipelines and three loops. I initially wrote it as a learning exercise, but I have found it useful.
+The process block of Expand-Csv is just 6 lines long.  It uses Import-Csv, Set-Variable, and ExpandString to do all the heavy lifting..THe code just has to set up three pipelines and three loops. I initially wrote Expand-csv as a learning exercise, but I have found it useful.
 
 It you want a more complete template-engine for poewrshell,  I suggest either MOLD or EPS.
 
