@@ -1,10 +1,10 @@
 ### Expand-Csv
 
-Expand-Csv is a simple csv template engine. It combines its two inputs into a series of expansions of the template.  One input is a CSV file that contains a driver table.  THe other imput is a simple template file, with embedded variables.  Templates can be almost anything:  code fragments of HTML, SQL, or other language,  or commands to be stored in a script ofr later execution.
+Expand-Csv is a simple csv template engine. It combines its two inputs into a series of expansions of the template.  One input is a CSV file that contains a driver table.  THe other imput is a simple template file, with embedded variables.  Templates can be almost anything:  code fragments of HTML, SQL, or other language,  or commands to be stored in a script for later execution.
 
 ## The csv file
 
-The CSV file contains data to replace the variable items in the template.  It can be thought of as a driver table, with rows and columns.  There is one row for each expansion to be generated.  There is one column for each variable item in the template.  The rows are csv records. The columns are csv fileds.  The field names in the header record correspond to the variable manes used in the template.
+The CSV file contains data to replace the variable items in the template.  It can be thought of as a driver table, with rows (CSV Records)and columns (CSV fields).There is one row for each expansion to be generated.  There is one column for each variable item in the template.  The columns have the same names as the variables in the template, except for the intial dollar sign.
 
 ## The Template file
 
