@@ -1,11 +1,27 @@
-Expand-Csv is a simple csv template engine. It is written as a Powershell function. It is intended to be used like a cmdlet. I built this little tool as a learning exercise.  I'm sharing it in the hopes that others will find it  useful.  Don't be fooled by how simple the tool is.  It's very powerful.  If the form of the results can be expressed in a template, and the content can be expressed in a csv file,  then this tool can probably be used to good effect. 
+### Expand-Csv
 
-The two inputs identify a csv file and a template file. The csv file contains data to be plugged into the template when an expansion is generated.  The csv file has one record for each expansion to be generated and one field for each variable in the template.  The template file contains plain text and embedded variables.  The variables begin with a dollar sign, as they do in powershell.  The variables will be replaced by values drawn from the csv file.  The text itself can take on the form of a series of simple powershell commands, but it is usually in some other language, like SQL or HTML. 
+Expand-Csv is a simple csv template engine. It combines its two inputs into a series of expansions of the template.  One input is a CSV file that contains a driver table.  THe other imput is a simple template file, with embedded variables.  Templates can be almost anything:  code fragments of HTML, SQL, or other language,  or commands to be stroed in a script ofr later execution.
 
-The process consists of an outer loop and an inner loop, both driven by pipelines.  The tool uses Import-csv, Set-Variable, and ExpandString to do all the heavy lifting.
+## The csv file
 
-There is a demo.txt file that illustrates the input and the results for two sample uses of Expand-Csv.  The first generates code to be run under powershell, and the second generates code to be run under SQL.  You can run the demo yourself using script Demo.ps1 and files Invoke.CSV, Invoke.tmplt,  Grants.csv, and Grants.tmplt.
+The CSV file contains data to replace the variable items in the template.  It can be thought of as a driver table, with rows and columns.  There is one row for each expansion to be generated.  There is one column for each variable item in the template.  The rows are csv records. The columns are csv fileds.  The field names in the header record correspond to the variable manes used in the template.
+
+## The Template file
+
+The template file is an ordinary text file with embedded variables.  The vasriables look like powershell variables.  These variables have the same name as the field names in the CSV file, except for the intial dollar sign.  Expand-csv attempts to resolve all powershell variables that it encounters in the template.  If there are varaibles in the template that are intended to be passed through to the expansions, they should be prefixed by a backtick.
+
+There are two example files that show two sample suses of Expand-Csv.  The fist one 
+
+## This repository
+
+This repository contains the source code to Expand-csv., a couple of example uses, a couple of demo scripts that generate the examples, and a few document files.  
+
+## The implementation
+
+The process block of Expand-Csv is all of 6 lines long.  It uses Import-Csv, Set-Variable, and ExpandString to do all the heavy lifting..THe code is just to set up three pipelines and three loops. I initially wrote it as a learning exercise, but I have found it useful.
+
+It you want a more complete template-engine for poewrshell,  I suggest either MOLD or EPS.
 
 Hope it helps.
 
-#powershell #template-engine #csv
+#powershell #template #csv
