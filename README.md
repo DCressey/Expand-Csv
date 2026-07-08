@@ -1,6 +1,6 @@
 ### Expand-Csv
 
-Expand-Csv is a simple csv template engine. It combines its two inputs into a series of expansions of the template.  One input is a CSV file that contains a driver table.  THe other imput is a simple template file, with embedded variables.  Templates can be almost anything:  code fragments of HTML, SQL, or other language,  or commands to be stroed in a script ofr later execution.
+Expand-Csv is a simple csv template engine. It combines its two inputs into a series of expansions of the template.  One input is a CSV file that contains a driver table.  THe other imput is a simple template file, with embedded variables.  Templates can be almost anything:  code fragments of HTML, SQL, or other language,  or commands to be stored in a script ofr later execution.
 
 ## The csv file
 
